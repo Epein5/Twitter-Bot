@@ -25,8 +25,8 @@ async def run_scheduler():
         
         # Random time between 8 PM and 10 PM
         random_hour = random.randint(20, 21)
-        random_minute = random.randint(0, 59)
-        tweet_time = nepal_tz.localize(datetime.combine(current_date, datetime.min.time()) + timedelta(hours=random_hour, minutes=random_minute))
+        random_minute = random.randint(0, 5)
+        tweet_time = nepal_tz.localize(datetime.combine(current_date, datetime.min.time()) + timedelta(hours=23, minutes=random_minute))
         
         # Calculate seconds until the tweet time
         now = datetime.now(nepal_tz)
