@@ -1,5 +1,6 @@
 import tweepy
 import os
+from text import challenge_posts
 # Enter API tokens below
 bearer_token = 'AAAAAAAAAAAAAAAAAAAAADXBwAEAAAAA5Agl3JWmBLr2yI79jLs%2B9BDL424%3DYNfEljda1O9XYkRBH1SU9w0TeMYUm36eycNDdRsQcRnD1XyIAI'
 consumer_key = 'c3h7VhWJVZJseAGUzTmuDB07e'
@@ -31,3 +32,5 @@ def tweet_it(imagepath, message):
     client.create_tweet(text=message, media_ids=[media_id])
   else:
     client.create_tweet(text=message)
+
+tweet_it('Pictures/3.jpg', challenge_posts[3])
